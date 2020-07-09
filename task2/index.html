@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,500|Raleway:400,400i,700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/media.css" />
+</head>
+
+<body>
+    <script type="text/babel">
+        const Footer = (props) => {
+            return (
+                <footer>
+                    <div class="container">
+                        <a href={props.href}>
+                            <img src={props.ImgSrc} alt="" />
+                        </a>
+                        <p>{props.text}</p>
+                    </div>
+                </footer>
+            )
+        }
+        const Review = (props) => {
+            return (
+                <div className="review">
+                    <p>“ {props.description} ”</p>
+                    <div className="commentor">
+                        <span className="commentor-name">-{props.name}</span>
+                        <a href={props.href}><img src={props.ImgSrc} alt="" /></a>
+                    </div>
+                </div>
+            )
+        }
+        const CompaniesTitle = (props) => {
+            return (
+                <div className="companies-title">
+                    <h3>{props.titleText}</h3>
+                    <p>{props.description}</p>
+                </div>
+            )
+        }
+        const ClientLogo = (props) => {
+            return (
+                <a href={props.href} className="client-logo"><img src={props.ImgSrc} alt={props.alt} /></a>
+            )
+        }
+        const ClientsBlock = () => {
+            return (
+                <div className="clients container">
+                    <div className="companies">
+                        <CompaniesTitle
+                            titleText="
+                                Our Clients
+                                "
+                            description="
+                                This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
+                                lorem quis bibendum.
+                                "/>
+                        <ClientLogo ImgSrc="./img/eco-logo.jpg" href="#" alt="Tree company" />
+                        <ClientLogo ImgSrc="./img/x-logo.jpg" href="#" alt="X company" />
+                        <ClientLogo ImgSrc="./img/u-logo.jpg" href="#" alt="U company" />
+                        <ClientLogo ImgSrc="./img/fish-logo.jpg" href="#" alt="Fish company" />
+                    </div>
+                    <div className="reviews">
+                        <Review name="Anna"
+                            description="
+                                This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
+                                lorem quis bibendum.
+                            "
+                            ImgSrc="./img/avatar-1.jpg"
+                            href="#"
+                        />
+                        <Review name="John Doe"
+                            description="
+                                This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
+                                lorem quis bibendum.
+                            "
+                            ImgSrc="./img/avatar-2.jpg"
+                            href="#"
+                        />
+
+                        <Review name="Anna"
+                            description="
+                            Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit
+                                consequat ipsum, nec sagittis sem nibh id elit.
+                            "
+                            ImgSrc="./img/avatar-1.jpg"
+                            href="#"
+                        />
+                    </div>
+                </div>
+            )
+        }
+        const Feature = (props) => {
+            return (
+                <div className="feature">
+                    <h4 className="feature-title">{props.titleText}</h4>
+                    <p>{props.description}</p>
+                    <a href={props.href}>read more</a>
+                </div>
+            )
+        }
+        const FeaturesBlock = (props) => {
+            return (
+                <div className="features-block">
+                    <div className="features-title">
+                        <h2>{props.titleText}</h2>
+                        <p>{props.subTitleText}</p>
+                    </div>
+                    <div className="features">
+                        <Feature
+                            titleText="Live Support"
+                            description="
+                                This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. amet mauris. Morbi
+                                accumsan ipsum velit.
+                                "
+                            href="#" />
+                        <Feature
+                            titleText="Cloud Technology"
+                            description="
+                                This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. amet mauris. Morbi
+                                accumsan ipsum velit.
+                                "
+                            href="#" />
+                        <Feature
+                            titleText="Hi Tech Database"
+                            description="
+                                This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. amet mauris. Morbi
+                                accumsan ipsum velit.
+                                "
+                            href="#" />
+                        <Feature
+                            titleText="Live Monitoring"
+                            description="
+                                This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. amet mauris. Morbi
+                                accumsan ipsum velit.
+                                "
+                            href="#" />
+                    </div>
+                </div>
+            )
+        }
+        const Service = (props) => {
+            return (
+                <div className="service">
+                    <div className="half-container">
+                        <h3>{props.titleText}</h3>
+                        <p>{props.description}</p>
+                        <a href={props.href}>More</a>
+                    </div>
+                </div>
+            )
+        }
+        const ServiceBlock = () => {
+            return (
+                <div className="service-block">
+                    <Service titleText="#1 Webhost Services"
+                        description="
+                        This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
+                                lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.
+                        "
+                        href="#" />
+                    <Service titleText="#1 Domain Services"
+                        description="
+                        This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
+                                lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.
+                        "
+                        href="#" />
+                </div>
+            )
+        }
+        const TopBlock = (props) => {
+            return (
+                <div className="top-block">
+                    <div className="container">
+
+                        <h1>{props.titleText}</h1>
+                        <form action="#">
+                            <div className="top-form">
+                                <div className="domain-input">
+                                    <label>
+                                        <input type="text" placeholder="Your Domain Name" />
+                                        <span>.com</span>
+                                    </label>
+                                </div>
+                                <div className="domain-submit">
+                                    <button>Check Availability</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            )
+        }
+        const HeaderLink = (props) => {
+            return (
+                <li><a href={props.href}>{props.text}</a></li>
+            )
+        }
+        const HeaderLogo = (props) => {
+            return (
+                <a href={props.href} className="header-logo">
+                    <img src={props.ImgSrc} alt={props.alt} />
+                </a>
+            )
+        }
+        const Header = () => {
+            return (
+                <header className="header container">
+                    <button className="header-menu" id="navBtn">
+                        <span></span>
+                    </button>
+                    <HeaderLogo href="#" ImgSrc="./img/logo.png" alt="Maguwo Host" />
+                    <nav className="header-nav" id="mainNav">
+                        <ul>
+                            <HeaderLink text="About" href="#" />
+                            <HeaderLink text="contacts" href="#" />
+                            <HeaderLink text="Pricing" href="#" />
+                            <HeaderLink text="Domain" href="#" />
+                            <HeaderLink text="Hosting" href="#" />
+                        </ul>
+                    </nav>
+                </header>
+            )
+        }
+        const Wrapper = () => {
+            return (
+                <div>
+                    <Header />
+                    <TopBlock titleText="Just a Proffesional Web Hosting Services" />
+                    <ServiceBlock />
+                    <FeaturesBlock titleText="Our Features" subTitleText="Our Best Features" />
+                    <ClientsBlock />
+                    <Footer ImgSrc="./img/icon-in-footer.png" text="Copyright 2014 Maguwohost by FikriStudio" href="#"/>
+                </div>
+            )
+        }
+        ReactDOM.render(<Wrapper />, document.body);
+
+
+
+        function navToggle() {
+
+            let navBtn = document.getElementById('navBtn');
+            let mainNav = document.getElementById('mainNav');
+
+            navBtn.onclick = function () {
+                let heightNav = mainNav.firstElementChild.offsetHeight;
+                if (mainNav.classList.contains('nav-hidden')) {
+                    mainNav.classList.remove('nav-hidden');
+                    mainNav.style.height = heightNav + 'px';
+                } else {
+                    mainNav.classList.add('nav-hidden');
+                    mainNav.style.height = 0;
+                }
+            }
+
+            window.addEventListener("resize", resizeHandler, false);
+
+            function resizeHandler() {
+                let heightNav = mainNav.firstElementChild.offsetHeight;
+                if (document.documentElement.clientWidth >= 900) {
+                    mainNav.style.height = 'auto';
+                } else {
+                    if (mainNav.classList.contains('nav-hidden')) {
+                        mainNav.style.height = 0;
+                    } else {
+                        mainNav.style.height = heightNav + 'px';
+                    }
+                }
+            }
+
+        }
+
+        navToggle();
+    </script>
+</body>
+
+</html>

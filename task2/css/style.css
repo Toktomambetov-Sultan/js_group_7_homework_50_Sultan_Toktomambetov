@@ -1,0 +1,362 @@
+body {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  background: #fff;
+  color: #202242;
+  line-height: 1.3;
+  min-width: 320px;
+  z-index: 1;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.container {
+  max-width: 1202px;
+  margin: 0 auto;
+  padding: 0 16px;
+  position: relative;
+}
+.half-container {
+  max-width: 601px;
+  margin: 0 auto;
+  padding: 0 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+.header-logo {
+  display: inline-block;
+  padding: 4.2% 16px 3.4%;
+}
+.header-menu {
+  position: absolute;
+  z-index: 5;
+  left: 16px;
+  font-size: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 14px 5px;
+  border: none;
+  background-color: rgba(204, 204, 204, 0.616);
+  outline: none;
+}
+
+.header-menu span::before,
+.header-menu span::after,
+.header-menu span {
+  content: "";
+  display: block;
+  width: 21px;
+  height: 1px;
+  background-color: #000;
+}
+.header-menu span::before,
+.header-menu span::after {
+  position: absolute;
+}
+.header-menu span::before {
+  margin-top: -10px;
+}
+.header-menu span::after {
+  margin-top: 10px;
+}
+
+.header-nav {
+  position: absolute;
+  height: 0;
+  top: 75%;
+  left: 0;
+  overflow: hidden;
+  transition: height 2s;
+  z-index: 40;
+}
+.nav-hidden {
+  height: auto;
+}
+.header-nav ul {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0;
+  padding: 17px 31px 20px 15px;
+  background-color: #ccc;
+}
+.header-nav li {
+  margin-bottom: 20px;
+}
+.header-nav a {
+  color: inherit;
+  text-decoration: none;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.top-block {
+  background: url("./../img/icon-circles.png") 50% 45% no-repeat,
+  linear-gradient(to top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%),
+    url("./../img/main-pic.jpg") 50% 50% no-repeat;
+  padding: 15.6% 16px 16.7%;
+  text-align: center;
+  position: relative;
+  z-index: 20;
+}
+.top-block h1{
+  margin: 0 0 17.3% 0;
+  font-family: 'Maven Pro', sans-serif;
+  color: #fff;
+  font-weight: 500;
+}
+.top-form{
+  width: 100%;
+  display: inline-flex;
+  padding: 18px;
+  background-color: #dddddd48;
+  font-size: 0;
+  flex-direction: column;
+}
+
+.domain-input{
+  font-size: 0;
+}
+.domain-input input{
+  padding: 20px 9px 18px 9px;
+  color: #2d2d2d;
+  border: none;
+  font-size: 14px;
+}
+.domain-input span{
+  display: inline-block;
+  padding: 23px 9px 17px 9px;
+  background-color: #ffe13e;
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.domain-submit button{
+  font-size: 14px;
+  display: block;
+  width: 100%;
+  color: #fff;
+  font-weight: bold;
+  padding: 20px 19px 20px 12px;
+  background-color: #ffe13e;
+  margin-top: 4px;
+  border: none;
+}
+
+.service-block{
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center;
+  color: #fff;
+}
+.service{
+  display: flex;
+  width: 100%;
+  padding-bottom: 104px;
+}
+.service:nth-child(1){
+  background-color: #202242;
+  justify-content: end;
+}
+.service:nth-child(2){
+  background-color: #ffe13e;
+  justify-content: start;
+}
+.service h3{
+  font-size: 36px;
+  margin: 35px 0 15px 0;
+  padding: 0;
+}
+.service p{
+  margin: 0px 0 33px;
+  padding: 0;
+  line-height: 1.7;
+}
+.service a{
+  display: inline-block;
+  margin: auto 0 0 0;
+  font-size: 18px;
+  border: 3px solid #fff;
+  color: inherit;
+  padding: 14px 52px;
+  text-decoration: none;
+}
+
+.features-block{
+  background: #fbf8f1 url("./../img/icon-features-circles.png") center no-repeat;
+  background-size: contain;
+  text-align: center;
+  padding: 6.2% 0 2.6%;
+}
+.features-title h2{
+  font-size: 48px;
+  padding: 0;
+  margin: 0;
+  font-family: 'Maven Pro', sans-serif;
+  font-weight: 500;
+}
+.features-title p{
+  font-size: 24px;
+  padding: 0;
+  margin: 0.6% 0 0;
+}
+
+.features{
+  display: flex;
+  width: 100%;
+  padding: 5.9% 0 0 0;
+  flex-direction: column;
+}
+.feature:nth-child(1){
+  background-image: url("./../img/icon-SEO.png");
+}
+.feature:nth-child(2){
+  background-image: url("./../img/icon-cloud.png");
+}
+.feature:nth-child(3){
+  background-image: url("./../img/icon-tech.png");
+}
+.feature:nth-child(4){
+  background-image: url("./../img/icon-monitor.png");
+}
+.feature{
+  display: flex;
+  flex-direction: column;
+  min-width: 270px;
+  padding: 160px 0 50px;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+}
+.feature::before{
+  content: "";
+  display: block;
+  width: 70px;
+  height: 3px; 
+  background-color: #b2b1b6;
+  margin: 0 auto;
+}
+.feature h4{
+  color: #f4d320;
+  font-size: 30px;
+  margin: 22px 0 0 0;
+  padding: 0;
+  font-family: 'Maven Pro', sans-serif;
+  font-weight: 500;
+}
+.feature p{
+  line-height: 1.75;
+  margin: 17px auto 16px;
+  width: 78%;
+}
+.feature a{
+  font-weight: 500;
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: inherit;
+  font-size: 18px;
+  margin: auto 0 0 0;
+}
+.companies{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 6.6% 0 6.9%;
+}
+.companies-title{
+  /* width: 270px; */
+  width: 100%;
+}
+.companies-title h3{
+  font-size: 36px;
+  font-family: 'Maven Pro', sans-serif;
+  font-weight: 500;
+  margin: 0;
+}
+.companies-title p{
+  font-size: 16px;
+  color: #adadad;
+}
+.companies a{
+  display: inline-block;
+  width: 48%;
+}
+.companies img{
+  width: 100%;
+}
+
+.reviews{
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.review{
+  padding: 22px 6px 61px 19px;
+  margin-bottom: 55px;
+  background-color: #faf9f9;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.review p{
+  font-style: italic;
+  color: #a4a4a4;
+  padding: 0;
+  margin: 0;
+  line-height: 1.7;
+}
+.commentor{
+  position: relative;
+  margin: auto 0 0;
+}
+.commentor-name{
+  position: absolute;
+  top: 22px;
+  left: 12px;
+  font-weight: bold;
+  margin: 0 0 0 0;
+  color: #696969;
+}
+.commentor a{
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  overflow: hidden;
+  border-radius: 50%;
+  position: absolute;
+  top: 19px;
+  right: 16px;
+}
+.commentor img{
+  margin: -19px -39px 0px;
+}
+footer{
+  background-color: #202242;
+  text-align: center;
+  padding: 30px 0 7%;
+  margin: 4.5% 0 0;
+}
+footer a{
+  display: block;
+  margin: 0 0 9px;
+}
+footer p{
+  color: #fff;
+  margin: 0;
+}
