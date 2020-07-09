@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            justify-content: space-evenly;
+        }
+    </style>
+</head>
+
+<body>
+    <script type="text/babel">
+        const styles = {
+            cards: {
+                background: "#ccc",
+                display: "flex",
+                justifyContent: "space-evenly",
+                alingItems: "stretch",
+                padding: "30px 5px ",
+            },
+            card: {
+                body: {
+                    background: "rgb(0, 16, 238)",
+                    padding: "10px 5px",
+                    marginBottom: "5px",
+                    maxWidth: "400px",
+                    display: 'flex',
+                    flexDirection: "column",
+
+                },
+                img: {
+                    width: "400px",
+                    marginBottom: "5px",
+                    height: "500px",
+                    flexGrow: "1",
+                },
+                title: {
+                    color: "#ffffff",
+                    margin: "0",
+                    padding: "0 20px",
+                    fontSize: "26px",
+                    textAlign: "center",
+                },
+            }
+        }
+        const Card = props => {
+            return (
+                <div style={styles.card.body}>
+                    <img src={props.imgSrc} style={styles.card.img} />
+                    <h4 style={styles.card.title}>{props.filmName}</h4>
+                    <h5 style={{ ...styles.card.title, fontSize: "20px" }}>Год выпуска: {props.yearIssue} г.</h5>
+                </div>
+            )
+        }
+        const Cards = () => {
+            return (
+                <div style={styles.cards}>
+                    <Card filmName="Двойник" imgSrc="./images/Photo1.jpeg" yearIssue="2013" />
+                    <Card filmName="Пираты Карибского моря: Мертвецы не рассказывают сказки" imgSrc="./images/Photo2.jpeg" yearIssue="2017" />
+                    <Card filmName='Назад В будущее' imgSrc="./images/Photo3.jpeg" yearIssue="1985" />
+                </div>
+            )
+        };
+        ReactDOM.render(<Cards />, document.body);
+    </script>
+</body>
+
+</html>
